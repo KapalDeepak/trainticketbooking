@@ -15,13 +15,13 @@ import com.train.binding.Ticket;
 @RestController
 public class PassangerRestController {
 
-	@PostMapping(value = "/passanger", produces = "application/json", consumes = "application/json")
+	@PostMapping(value = "/passangers", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<Ticket> getPassangerDetails(@RequestBody Passanger passanger) {
-		   Ticket ticket = new Ticket((long)456345643, "Konark Express", "BAM", "CSTM", passanger);
+		   Ticket ticket = new Ticket((long)456345643, "Konark Express", "BAM", "CSTM", new Passanger(2354,"Kapal deepak", 24,435734733456l, "kapal2000@gmail.com"));
 		String str = "ticket booked successfully ";
 		return new ResponseEntity<Ticket>(ticket, HttpStatus.CREATED);
 	}
-	@PutMapping("/ticket")
+	@PutMapping("/tickets")
 	public ResponseEntity<String> updateTicket(@RequestBody Passanger passanger)
 	{
 		System.out.println(passanger);
