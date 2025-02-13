@@ -17,7 +17,7 @@ public class PassangerRestController {
 
 	@PostMapping(value = "/passangers", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<Ticket> getPassangerDetails(@RequestBody Passanger passanger) {
-		   Ticket ticket = new Ticket((long)456345643, "Konark Express", "BAM", "CSTM", new Passanger(2354,"Kapal deepak", 24,435734733456l, "kapal2000@gmail.com"));
+		   Ticket ticket = new Ticket((long)456345643, "Konark Express", "BAM", "CSTM", new Passanger(2354,"Kapal deepak", 24,"Male",435734733456l, "kapal2000@gmail.com"));
 		String str = "ticket booked successfully ";
 		return new ResponseEntity<Ticket>(ticket, HttpStatus.CREATED);
 	}

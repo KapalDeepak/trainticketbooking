@@ -12,7 +12,9 @@ public class Passanger {
 	private Integer pId;
 	private String pName;
 	private Integer pAge;
+	private String pGender;
 	private Long pNo;
 	private String emailId;
+	
 
 }
