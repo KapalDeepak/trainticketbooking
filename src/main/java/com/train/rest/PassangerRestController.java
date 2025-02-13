@@ -21,6 +21,10 @@ public class PassangerRestController {
 		String str = "ticket booked successfully ";
 		return new ResponseEntity<Ticket>(ticket, HttpStatus.CREATED);
 	}
+	@PostMapping("/addTicket")
+	public ResponseEntity<Ticket> addPassangerDetails(@RequestBody Passenger passenger){
+		System.out.println(passenger);
+		return new ResponseEntity<Ticket>("TicketAdded" , HttpStatus.OK);
 	@PutMapping("/tickets")
 	public ResponseEntity<String> updateTicket(@RequestBody Passanger passanger)
 	{
